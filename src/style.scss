@@ -1,4 +1,6 @@
 @use 'config' as c;
+@use 'art01';
+
 
 
 
@@ -25,9 +27,11 @@ header {
     @media only screen and (min-width: c.$desktop){
       color: rgb(18, 182, 18);
       }
+
       }
 
 }
+
 .boton {
   text-decoration: none;
   color: white;
@@ -36,13 +40,13 @@ header {
   padding: 1rem 2rem;
   transition: 1s;
   border-radius: 4px;
-   @media only screen and (min-width: c.$tablet){
+  @media only screen and (min-width: c.$tablet){
       color: red;
       }
     @media only screen and (min-width: c.$desktop){
       color: rgb(18, 182, 18);
       }
-  &:hover {
+    &:hover {
     color: gold;
     background-color: white;
     }
