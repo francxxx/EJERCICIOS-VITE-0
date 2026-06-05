@@ -2,5 +2,89 @@
 
 .art02 {
     width: 100%;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 2rem;
+    @media only screen and (min-width:c.$tablet){
+        padding: initial;
+    }
+    @media only screen and (min-width:c.$desktop){
+        width: 80%;
+        row-gap: 3rem;
+    }
+
+    >:nth-child(1){
+        background-color: rgb(186, 196, 228);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 1.5rem;
+        @media only screen and (min-width:c.$tablet){
+            width: 80%;
+        }
+
+    } 
+    >:nth-child(2){
+        background-color: rgb(209, 121, 121);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 2rem;
+        @media only screen and (min-width:c.$tablet){
+            width: 80%;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            column-gap: 1.5rem;
+            row-gap: initial;
+        }
+        @media only screen and (min-width:c.$desktop){
+            width: 80%;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            row-gap: 1.5rem;
+        }
     
+        .item {
+            background-color: red;
+            width: 100%;
+            // height: calc(100dvw - 3rem);
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            
+            // @media only screen and (min-width:c.$tablet){
+            //     height: 40dvh;
+            // }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+
+            >:nth-child(1){
+                position: absolute;
+                z-index: 100;
+                font-size: clamp(2rem, 3vw, 5rem);
+                color: c.$color00;
+                text-align: center;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }         
+        }   
+    }
 }

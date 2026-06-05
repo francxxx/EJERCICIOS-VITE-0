@@ -1,8 +1,8 @@
 @use 'config' as c;
+
 @use 'art01';
-
-
-
+@use 'art02';
+@use 'art03';
 
 
 header {
@@ -22,14 +22,12 @@ header {
     font-family: c.$fuentesHeaders;
 
     @media only screen and (min-width: c.$tablet){
-      color: red;
-      }
+    color: red;
+    }
     @media only screen and (min-width: c.$desktop){
-      color: rgb(18, 182, 18);
-      }
-
-      }
-
+    color: rgb(18, 182, 18);
+    }
+  }
 }
 
 .boton {
@@ -41,14 +39,13 @@ header {
   transition: 1s;
   border-radius: 4px;
   @media only screen and (min-width: c.$tablet){
-      color: red;
-      }
+    color: red;
+    }
     @media only screen and (min-width: c.$desktop){
-      color: rgb(18, 182, 18);
-      }
+    color: rgb(18, 182, 18);
+    }
     &:hover {
     color: gold;
     background-color: white;
     }
-
 }
