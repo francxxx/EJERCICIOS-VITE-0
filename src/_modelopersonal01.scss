@@ -2,4 +2,45 @@
 
 .modelopersonal01{
     
+    width: 100%;
+    padding: 2rem 1.5rem;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+
+    @media only screen and (min-width:c.$tablet){
+        padding: 3rem 1.5rem;  
+    }
+    @media only screen and (min-width:c.$desktop){
+        padding: 4rem 1.5rem;
+        }
+        >div {
+        
+        width: 260px;
+        padding: 2rem 1rem;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        row-gap: 3rem;
+
+        @media only screen and (min-width:c.$tablet){
+        row-gap: 4rem;
+        }
+        >:nth-child(1){
+        font-weight: 300;
+        font-size: clamp(1rem, 5vw, 1.5rem);
+        text-align: center;
+        }
+        img{
+            width: 30%;
+            filter: invert(48%) sepia(24%) saturate(5620%) hue-rotate(163deg) brightness(97%) contrast(101%);
+            order: 0;
+        }
+    }
 }

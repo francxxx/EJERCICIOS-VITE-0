@@ -1,8 +1,8 @@
 @use 'config' as c;
 
 .artGrid {
-    background-color: aqua;
-
+    
+    width: 80%;
     display: grid;
     gap: 1rem;
     grid-auto-rows: auto;
@@ -27,7 +27,18 @@
     'area02 area03'
     'area04 area04'
     'area05 area06'
-    
+    ;
+    }
+
+    @media only screen and (min-width:c.$desktop){
+
+    grid-auto-rows: auto;
+    grid-auto-columns: auto;
+    grid-template-areas:
+
+    'area01 area01 area02'
+    'area03 area03 area04'
+    'area05 area05 area06'
     ;
     }
 
