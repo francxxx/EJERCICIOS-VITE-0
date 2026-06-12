@@ -14,16 +14,34 @@ console.log(mivariable + "" + miotravariable)
 console.log(resultado)
 
 //const elementoHtmlBoton = document.getElementById("boton")
-const elementoHtmlBoton = document.querySelector("#boton")
+const elementoHtmlBoton = document.querySelector("#IDboton")
 
-elementoHtmlBoton.style.backgroundcolor="pink"
+//elementoHtmlBoton.style.backgroundColor="pink"
 
 // console.log(elementoHtmlBoton)
 
 
 elementoHtmlBoton.addEventListener("click", function(){
-    elementoHtmlBoton.style.backgroundcolor="pink"
-    elementoHtmlBoton.style.color="green"
+    elementoHtmlBoton.style.backgroundColor="orange"
+    elementoHtmlBoton.style.color="black"
+})
+
+const botones = document.querySelectorAll(".boton")
+
+botones.forEach(function(boton){
+    boton.addEventListener("click", function(){
+        boton.style.backgroundColor="pink"
+        boton.style.color="green"
+    })
+
+})
+
+botones.forEach((boton)=>{
+    boton.addEventListener("click", ()=>{
+        boton.style.backgroundColor="pink"
+        boton.style.color="green"
+    })
+
 })
 
 
