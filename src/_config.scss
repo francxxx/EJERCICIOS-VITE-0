@@ -1,0 +1,58 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  
+}
+:root{
+  --color: rgb(255, 255, 255);
+}
+// Dar de alta a las fuentes en el stack ( instalarlas)
+@font-face {
+  font-family: 'Playwrite';
+  src: url(./assets/PlaywriteGBJ-Italic-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url(./assets/Roboto_SemiCondensed-Medium.ttf);
+}
+
+// VARIABLES Fuentes y colores
+$fuentesText: 'Playwrite';
+$fuentesHeaders: 'Roboto';
+$color00: white;
+$color01: rgb(247, 155, 155);
+$color02: #4618b9;
+$color03: #ce18a3;
+$color04: #5c98e2;
+
+$tablet: 800px;
+$desktop: 1100px;
+  
+header, nav, main, section{
+  width: 100%;
+}
+
+section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  row-gap: 3rem;
+  padding: 2rem 0rem;
+  @media only screen and (min-width: $desktop){
+    padding: 4rem 0rem;
+    row-gap: 4rem;
+    }
+    }
+
+  h1, h2{
+    font-family: $fuentesHeaders;
+    }
+
+  h3{
+    font-family: $fuentesHeaders;
+    color: $color02;
+  }
