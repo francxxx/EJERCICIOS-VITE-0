@@ -12,3 +12,19 @@ let resultado = num1 + num2
 
 console.log(mivariable + "" + miotravariable)
 console.log(resultado)
+
+//const elementoHtmlBoton = document.getElementById("boton")
+const elementoHtmlBoton = document.querySelector("#boton")
+
+elementoHtmlBoton.style.backgroundcolor="pink"
+
+// console.log(elementoHtmlBoton)
+
+
+elementoHtmlBoton.addEventListener("click", function(){
+    elementoHtmlBoton.style.backgroundcolor="pink"
+    elementoHtmlBoton.style.color="green"
+})
+
+
+
