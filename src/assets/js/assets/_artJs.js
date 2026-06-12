@@ -1,7 +1,14 @@
 let mivariable
-var miotravariable
+var miotravariable // esto es obsoleto
 const miValorInalterable = "cualquiercosa"
 
-mivariable = 'igor dfgdfdfdf'
+mivariable = 'igor'
+miotravariable = "Aranaz"
 
-console.log(mivariable)
+let num1 = 20
+let num2 = 8
+let resultado = num1 + num2
+
+
+console.log(mivariable + "" + miotravariable)
+console.log(resultado)
