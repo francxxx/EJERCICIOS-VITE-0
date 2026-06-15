@@ -59,12 +59,18 @@ botones.forEach((boton)=>{
 })
 
 const botonesDesplegar = document.querySelectorAll(".botonDesplegar")
-const parrafoADesplegar = document.querySelector(".desplegable")
+
 
     botonesDesplegar.forEach((item)=>{
 
         item.addEventListener("click" , ()=>{
-            parrafoADesplegar.classList.toggle("open")
+
+            // cojo el elemento padre y de ahi el elemento de la clase que me interesa(solo el 1ro con esa clase)
+            // const superior = item.parentElement
+            // const miParrafo = superior.querySelector(".desplegable")
+
+            const miParrafo = item.previousElementSibling // cojo el elemento previo al que tengo en item.
+            miParrafo.classList.toggle("open")
         })
     })
 
