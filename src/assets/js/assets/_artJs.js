@@ -66,6 +66,7 @@ const botonesDesplegar = document.querySelectorAll(".botonDesplegar")
         item.addEventListener("click" , ()=>{
 
             // cojo el elemento padre y de ahi el elemento de la clase que me interesa(solo el 1ro con esa clase)
+
             const superior = item.parentElement
             const miParrafo = superior.querySelector(".desplegable")
 
@@ -74,7 +75,7 @@ const botonesDesplegar = document.querySelectorAll(".botonDesplegar")
 
             miParrafo.classList.toggle("open")
 
-            // contains me devuelve true o false si el elemento ocntiene clase o no.
+            // contains me devuelve true o false si el elemento contiene clase o no.
             console.log(miParrafo.classList.contains("open"))
 
 
@@ -84,11 +85,11 @@ const botonesDesplegar = document.querySelectorAll(".botonDesplegar")
             }else{
                 item.textContent="leer más"
             }
-            
+
             // opcion 2 / ternario
             miParrafo.classList.contains("open") ? item.textContent ="leer menos" : item.textContent="leer más"
 
-            // opcion 2 / operadpor ternario mas optimizado
+            // opcion 2 / operador ternario mas optimizado
             const h = miParrafo.classList.contains("open")
             item.textContent = h ? "Leer menos" : "leer más"
 
