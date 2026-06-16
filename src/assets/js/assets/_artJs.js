@@ -44,7 +44,7 @@ botones.forEach((boton)=>{
     boton,addEventListener("click" , (e)=>{
 
         botones.forEach((boton)=>{
-            boton.style.backgroundColor="#410a6e"
+            boton.style.backgroundColor="orange"
             boton.style.border="2px dashed #410a6e"
             boton.style.color="white"
             console.log(mivariable)
@@ -66,11 +66,23 @@ const botonesDesplegar = document.querySelectorAll(".botonDesplegar")
         item.addEventListener("click" , ()=>{
 
             // cojo el elemento padre y de ahi el elemento de la clase que me interesa(solo el 1ro con esa clase)
-            // const superior = item.parentElement
-            // const miParrafo = superior.querySelector(".desplegable")
+            const superior = item.parentElement
+            const miParrafo = superior.querySelector(".desplegable")
 
-            const miParrafo = item.previousElementSibling // cojo el elemento previo al que tengo en item.
+            // const miParrafo = item.previousElementSibling // cojo el elemento previo al que tengo en item.
+
+
             miParrafo.classList.toggle("open")
+
+            // contains me devuelve true o false si el elemento ocntiene clase o no.
+            console.log(miParrafo.classList.contains("open"))
+
+            if(miParrafo.classList.contains("open")===true){
+                item.textContent="leer menos"
+            }else{
+                item.textContent="leer más"
+            }
+            
         })
     })
 
