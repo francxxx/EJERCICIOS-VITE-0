@@ -77,12 +77,22 @@ const botonesDesplegar = document.querySelectorAll(".botonDesplegar")
             // contains me devuelve true o false si el elemento ocntiene clase o no.
             console.log(miParrafo.classList.contains("open"))
 
+
+            // opcion 1
             if(miParrafo.classList.contains("open")===true){
                 item.textContent="leer menos"
             }else{
                 item.textContent="leer más"
             }
             
+            // opcion 2 / ternario
+            miParrafo.classList.contains("open") ? item.textContent ="leer menos" : item.textContent="leer más"
+
+            // opcion 2 / operadpor ternario mas optimizado
+            const h = miParrafo.classList.contains("open")
+            item.textContent = h ? "Leer menos" : "leer más"
+
+
         })
     })
 
