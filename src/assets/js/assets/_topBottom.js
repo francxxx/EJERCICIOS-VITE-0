@@ -3,7 +3,7 @@ export default function topBottom() {
   $btnTop.className = "fab-button hidden";
 
   $btnTop.innerHTML = `
-    <i class="fa-solid fa-arrow-up"></i>
+  <i class="fa-solid fa-arrow-up"></i>
   `;
 
   $btnTop.addEventListener("click", (e) => {
