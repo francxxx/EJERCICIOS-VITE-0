@@ -1,0 +1,37 @@
+@use "./assets/config" as c;
+@use "./assets/animations";
+@use "./assets/art01";
+@use "./assets/art02";
+@use "./assets/art03";
+@use "./assets/artGrid";
+@use "./assets/modulePersonal01";
+@use "./assets/artSlider01";
+@use "./assets/artJs";
+@use "./assets/artAcordeon01";
+@use "./assets/topBotton";
+@use "./assets/nav";
+@use "./assets/darkmode";
+
+
+header {
+  height: 100dvh;
+  background: linear-gradient(45deg, c.$color02, c.$color03, c.$color04);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 2rem;
+}
+
+h1 {
+  font-size: clamp(1rem, 5vw, 6rem);
+  font-weight: 900;
+  color: c.$color00;
+  font-family: c.$fuenteHeaders;
+  @media only screen and (min-width: c.$tablet) {
+    color: rgb(255, 238, 0);
+  }
+  @media only screen and (min-width: c.$desktop) {
+    color: rgb(255, 0, 0);
+  }
+}

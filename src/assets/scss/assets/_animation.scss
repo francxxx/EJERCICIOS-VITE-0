@@ -1,0 +1,29 @@
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+    }
+
+.show {
+    animation: showY 2s;
+}
+
+.fadeOut {
+    opacity: 0;
+    scale: 0.5;
+    transform: translateX(-200px);
+    }
+
+.fadeIn {
+    transition: all 1s ease-in;
+    transform: translateX(0);
+    opacity: 1;
+    scale: 1;
+    }
+
+
+@keyframes showY {
+    20%,
+    0% { transform: translateY(5px); }
+    50% { transform: translateY(20px); }
+    100% { transform: translateY(0); }
+}

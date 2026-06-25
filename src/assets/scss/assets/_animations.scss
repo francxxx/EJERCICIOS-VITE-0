@@ -1,0 +1,17 @@
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.show {
+  animation: showY 1s;
+}
+
+@keyframes showY {
+  50% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
