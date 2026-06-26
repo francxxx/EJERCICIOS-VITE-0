@@ -16,12 +16,11 @@ export default function modal(template){
         </div>
     </div>
     `;
-        // cerramos el modal cuando se pulse click
-        
-    $modal.addEventListener("click" , ()=>{
 
-    $modal.remove();
-    });
+    const $btnClose = $modal.querySelector(".modal--btn-close");
+        // cerramos el modal cuando se pulse click
+
+    $btnClose.addEventListener("click", () => $modal.remove());
 
     return $modal;
     }
