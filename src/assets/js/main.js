@@ -10,6 +10,8 @@ import topBottom from "./assets/_topBottom.js";
 import darkMode from "./assets/_darkmode.js";
 import observer from "./assets/_observer.js";
 import navScrollTop from "./assets/_navScrollTop.js";
+import modal from "./assets/_modal.js";
+import Dialog from "./assets/templates/Dialog.js";
 
 //así llamo a la función que me viene del import, y lo hacemos cuando el dom se ha cargado. esto es un listener que espera a que el dom (html) se cargue.
 
@@ -25,4 +27,12 @@ document.addEventListener("DOMContentLoaded", () => {
   darkMode();
   observer();
   navScrollTop();
-});
+  //document.body.appendChild(modal());
+  const $btnOpenModal = document.querySelector("#btnOpenModal");
+  $btnOpenModal.addEventListener("click" , ()=> {
+    document.body.appendChild(
+    modal(Dialog())
+  );
+  });
+  
+  });
